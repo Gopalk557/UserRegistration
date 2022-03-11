@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace UserRegistration
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the User Registration");
-            Console.ReadLine();
+            Registration registration = new Registration();
+            registration.UserData();
+            Console.ReadKey();
         }
     }
 }
