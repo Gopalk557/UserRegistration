@@ -59,6 +59,19 @@ namespace UserRegistration
             {
                 Console.WriteLine("Enter valid Email id!");
             }
+            //Ucase 4
+            Regex regex3 = new Regex("^[+][0-9]{2}[ ][6-9]{1}[0-9]{9}$");
+            Console.WriteLine("Enter Contact Number :");
+            string phoneNumber = (Console.ReadLine());
+
+            if (regex3.IsMatch(phoneNumber))
+            {
+                Console.WriteLine("your contact number is :" + phoneNumber);
+            }
+            else
+            {
+                Console.WriteLine("Enter valid Mobile Number!");
+            }
         }
     }
 }
