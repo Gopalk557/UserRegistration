@@ -41,6 +41,24 @@ namespace UserRegistration
                 Console.WriteLine("Please Enter valid Name!");
             }
 
+            //Ucase 3
+            string regex1 = "^[a-zA-Z0-9]{3,}[.][a-zA-Z0-9]{3,}[@][a-zA-Z0-9]{2,}[.][a-zA-Z]{2,}[.][a-zA-Z]{2}?$";
+            string regex2 = "^[A-Za-z0-9]{3,}[@][A-za-z]{3,}[.][A-Za-z]{3}$";
+
+            Regex exp1 = new Regex(regex1);
+            Regex exp2 = new Regex(regex2);
+
+            Console.WriteLine("Enter Email id");
+            string email = Console.ReadLine();
+            if (exp1.IsMatch(email) || exp2.IsMatch(email))
+            {
+                Console.WriteLine("your Email id is :" + email);
+
+            }
+            else
+            {
+                Console.WriteLine("Enter valid Email id!");
+            }
         }
     }
 }
