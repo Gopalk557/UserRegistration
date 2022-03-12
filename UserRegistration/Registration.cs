@@ -72,6 +72,21 @@ namespace UserRegistration
             {
                 Console.WriteLine("Enter valid Mobile Number!");
             }
+            //UseCase 5
+
+
+            Regex regex4 = new Regex("^[a-zA-Z0-9]{8,}$");
+            Console.WriteLine("Enter password minimum 8 characters");
+            string password = Console.ReadLine();
+
+            if (regex4.IsMatch(password))
+            {
+                Console.WriteLine("Your password is :" + password);
+            }
+            else
+            {
+                Console.WriteLine("Enter valid Password");
+            }
         }
     }
 }
