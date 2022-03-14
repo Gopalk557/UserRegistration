@@ -111,7 +111,19 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("Enter valid Password");
+            }
+            //Use Case 8
 
+            Regex pttrn1 = new Regex("^(?=[a-zA-Z0-9#@$?]{8,}$)(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[0-9]).*");
+            Console.WriteLine("Enter password ");
+            string pass1 = Console.ReadLine();
+            if (pttrn1.IsMatch(pass1))
+            {
+                Console.WriteLine("Your password is :" + pass1);
+            }
+            else
+            {
+                Console.WriteLine("Enter valid Password");
 
             }
         }
